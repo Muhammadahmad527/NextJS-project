@@ -99,7 +99,7 @@ export default function Header() {
               </a>
 
               <a href="https://www.tiktok.com/@pizzaiolosydney?_t=ZS-9100mVwgCMS&_r=1" target="_blank"
-                rel="noopener noreferrer" className="hover:text-black transition">
+                rel="noopener noreferrer" className="hover:text-purple-950 transition">
                 <FaTiktok className="text-[18px]" />
               </a>
               <button className="px-4 py-1 rounded-full bg-red-600 hover:bg-transparent hover:border duration-100 cursor-pointer">
