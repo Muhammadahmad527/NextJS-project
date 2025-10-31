@@ -10,15 +10,14 @@ import Link from "next/link";
 
 export default function Header() {
 
-
   const menuItems = [
-  { label: "Home", href: "/" },
-  { label: "Pizza Catering Form", href: "/pizza-form" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Catering Form", href: "/catering-form" },
-  { label: "Roaming Cannoli", href: "/roaming-cannoli" },
-  { label: "Pizzaiolo Setup", href: "/setuppizzaiolo" },
-];
+    { label: "Home", href: "/" },
+    { label: "Pizza Catering Form", href: "/pizza-form" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "Catering Form", href: "/catering-form" },
+    { label: "Roaming Cannoli", href: "/roaming-cannoli" },
+    { label: "Pizzaiolo Setup", href: "/setuppizzaiolo" },
+  ];
 
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -124,7 +123,6 @@ export default function Header() {
         </div>
       )}
 
-
       {/* ✅ NAVBAR */}
       <nav
         className={`flex items-center justify-between px-6 md:px-8 lg:px-10 transition-all duration-500 ${scrolled ? "bg-black shadow-md py-2" : "bg-transparent py-4"
@@ -139,13 +137,11 @@ export default function Header() {
           className={`transition-transform duration-500 hover:rotate-[360deg] ${scrolled ? "w-16 h-16" : "w-24 h-24"}`}
         />
 
-
-
         {/* Desktop Links */}
         <ul className="hidden xl:flex space-x-6 text-white font-medium">
           <Link href="/"><li className="hover:text-red-600 cursor-pointer duration-300">Home</li></Link>
           <li className="hover:text-red-600 cursor-pointer duration-300">Pizza Catering Form</li>
-          <li className="hover:text-red-600 cursor-pointer duration-300">Gallery</li>
+          <Link href="/gallery"><li className="hover:text-red-600 cursor-pointer duration-300">Gallery</li></Link>
           <li className="hover:text-red-600 cursor-pointer duration-300">Catering Form</li>
           <li className="hover:text-red-600 cursor-pointer duration-300">Roaming Cannoli</li>
           <Link href="/setuppizzaiolo"><li className="hover:text-red-600 cursor-pointer duration-300">Pizzaiolo Setup</li></Link>
@@ -173,20 +169,20 @@ export default function Header() {
         </div>
 
         <ul className="flex flex-col items-center space-y-6 text-lg mt-6">
-  {menuItems.map(({ label, href }) => (
-    <li key={label} onClick={() => setMenuOpen(false)}>
-      <Link href={href} className="hover:text-red-600 cursor-pointer">
-        {label}
-      </Link>
-    </li>
-  ))}
+          {menuItems.map(({ label, href }) => (
+            <li key={label} onClick={() => setMenuOpen(false)}>
+              <Link href={href} className="hover:text-red-600 cursor-pointer">
+                {label}
+              </Link>
+            </li>
+          ))}
 
-  <li onClick={() => setMenuOpen(false)}>
-    <Link href="/contact" className="text-red-500 font-semibold hover:text-red-400">
-      Contact Us
-    </Link>
-  </li>
-</ul>
+          <li onClick={() => setMenuOpen(false)}>
+            <Link href="/contact" className="text-red-500 font-semibold hover:text-red-400">
+              Contact Us
+            </Link>
+          </li>
+        </ul>
 
       </div>
     </header>

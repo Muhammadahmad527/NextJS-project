@@ -4,14 +4,14 @@ import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer
-      className="relative min-h-[60vh] flex flex-col justify-between text-white"
-      style={{
-        backgroundImage: "url('/newcon.png')",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundColor: "black",
-      }}
+      className="relative min-h-[60vh] flex flex-col justify-between text-white bg-black border-t border-white/20"
+      // style={{
+      //   backgroundImage: "url('/newcon.png')",
+      //   backgroundSize: "cover",
+      //   backgroundRepeat: "no-repeat",
+      //   backgroundPosition: "center",
+      //   backgroundColor: "black",
+      // }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
@@ -99,7 +99,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTiktok className="hover:text-black transition-colors duration-300" />
+            <FaTiktok className="hover:text-purple-500 transition-colors duration-300" />
           </a>
         </div>
       </div>
