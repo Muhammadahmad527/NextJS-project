@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+*{
+  box-sizing: border-box;
+  
+}
+body{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/* index.css (add after Tailwind) */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* caret shown only while typing */
+.typing-caret {
+  display: inline-block;
+  width: 0;
+  border-right: 3px solid #facc15; /* yellow caret */
+  margin-left: 2px;
+  vertical-align: bottom;
+  animation: blink .7s step-end infinite;
+}
+
+/* no caret (hidden) */
+.typing-caret.hidden {
+  border-right-color: transparent;
+  animation: none;
+}
+
+@keyframes toss {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-120px) rotate(30deg);
+  }
+  50% {
+    transform: translateY(-160px) rotate(60deg);
+  }
+  75% {
+    transform: translateY(-120px) rotate(90deg);
+  }
+}
+
+@keyframes armLeft {
+  0%, 100% { transform: rotate(10deg); }
+  50% { transform: rotate(-20deg); }
+}
+
+@keyframes armRight {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(20deg); }
+}
+
+.animate-toss {
+  animation: toss 1.6s infinite ease-in-out;
+}
+
+.animate-arm-left {
+  animation: armLeft 1.6s infinite ease-in-out;
+}
+
+.animate-arm-right {
+  animation: armRight 1.6s infinite ease-in-out;
+}
+
+
+
+
+/*new animaton*/
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeLeft 1s ease-out forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: fadeRight 1s ease-out forwards;
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
