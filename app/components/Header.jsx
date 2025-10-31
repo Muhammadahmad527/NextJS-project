@@ -5,8 +5,21 @@ import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 import { FiMail } from "react-icons/fi";
 import Image from "next/image";
+import Link from "next/link";
+
 
 export default function Header() {
+
+
+  const menuItems = [
+  { label: "Home", href: "/" },
+  { label: "Pizza Catering Form", href: "/pizza-form" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Catering Form", href: "/catering-form" },
+  { label: "Roaming Cannoli", href: "/roaming-cannoli" },
+  { label: "Pizzaiolo Setup", href: "/setuppizzaiolo" },
+];
+
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -62,9 +75,9 @@ export default function Header() {
                 <FaTiktok className="text-[18px]" />
               </a>
 
-              <button className="px-3 py-1 rounded bg-red-600 text-sm hover:bg-red-700 transition">
+              <Link href="/contact"><button className="px-3 py-1 rounded bg-red-600 text-sm hover:bg-red-700 transition">
                 Contact Us
-              </button>
+              </button></Link>
             </div>
 
           </div>
@@ -102,9 +115,9 @@ export default function Header() {
                 rel="noopener noreferrer" className="hover:text-purple-950 transition">
                 <FaTiktok className="text-[18px]" />
               </a>
-              <button className="px-4 py-1 rounded-full bg-red-600 hover:bg-transparent hover:border duration-100 cursor-pointer">
+              <Link href="/contact"><button className="px-4 py-1 rounded-full bg-red-600 hover:bg-transparent hover:border duration-100 cursor-pointer">
                 Contact Us
-              </button>
+              </button></Link>
             </div>
           </div>
 
@@ -130,19 +143,20 @@ export default function Header() {
 
         {/* Desktop Links */}
         <ul className="hidden xl:flex space-x-6 text-white font-medium">
-          <li className="hover:text-red-600 cursor-pointer duration-300">Home</li>
+          <Link href="/"><li className="hover:text-red-600 cursor-pointer duration-300">Home</li></Link>
           <li className="hover:text-red-600 cursor-pointer duration-300">Pizza Catering Form</li>
           <li className="hover:text-red-600 cursor-pointer duration-300">Gallery</li>
           <li className="hover:text-red-600 cursor-pointer duration-300">Catering Form</li>
           <li className="hover:text-red-600 cursor-pointer duration-300">Roaming Cannoli</li>
-          <li className="hover:text-red-600 cursor-pointer duration-300">Pizzaiolo Setup</li>
+          <Link href="/setuppizzaiolo"><li className="hover:text-red-600 cursor-pointer duration-300">Pizzaiolo Setup</li></Link>
         </ul>
 
         {/* Contact Button Desktop */}
-        <button className="hidden xl:block px-4 py-2 rounded-full bg-red-600 border-2 border-red-600 text-white hover:bg-transparent hover:border-white transition cursor-pointer">
-          Contact Us
-        </button>
-
+        <Link href="/contact">
+          <button className="hidden xl:block px-4 py-2 rounded-full bg-red-600 border-2 border-red-600 text-white hover:bg-transparent hover:border-white transition cursor-pointer">
+            Contact Us
+          </button>
+        </Link>
         {/* Mobile Menu Icon */}
         <div className="xl:hidden text-white text-3xl cursor-pointer">
           <FiMenu onClick={() => setMenuOpen(true)} />
@@ -159,17 +173,21 @@ export default function Header() {
         </div>
 
         <ul className="flex flex-col items-center space-y-6 text-lg mt-6">
-          {["Home", "Pizza Catering Form", "Gallery", "Catering Form", "Roaming Cannoli", "Pizzaiolo Setup"].map(
-            (label) => (
-              <li key={label} onClick={() => setMenuOpen(false)} className="hover:text-red-600 cursor-pointer">
-                {label}
-              </li>
-            )
-          )}
-          <li className="text-red-500 font-semibold" onClick={() => setMenuOpen(false)}>
-            Contact Us
-          </li>
-        </ul>
+  {menuItems.map(({ label, href }) => (
+    <li key={label} onClick={() => setMenuOpen(false)}>
+      <Link href={href} className="hover:text-red-600 cursor-pointer">
+        {label}
+      </Link>
+    </li>
+  ))}
+
+  <li onClick={() => setMenuOpen(false)}>
+    <Link href="/contact" className="text-red-500 font-semibold hover:text-red-400">
+      Contact Us
+    </Link>
+  </li>
+</ul>
+
       </div>
     </header>
   );
