@@ -8,17 +8,16 @@ export default function Top() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Detect screen size
+    
     const handleResize = () => {
       setIsMobile(window.innerWidth < 520);
     };
 
-    handleResize(); // run on load
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Show button when user scrolls down & screen is wider than 520px
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.scrollY > 50 ) {
@@ -32,7 +31,6 @@ export default function Top() {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, [isMobile]);
 
-  // Scroll to top smoothly
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

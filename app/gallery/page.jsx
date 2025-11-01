@@ -72,7 +72,7 @@ export default function Gallery() {
         Explore our catered events, authentic woodfire pizzas, and Pizzaiolo experience.
       </p> */}
 
-      {/* Gallery Grid */}
+      { }
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-7xl mx-auto">
         {images.map((src, index) => (
           <div
@@ -90,7 +90,7 @@ export default function Gallery() {
         ))}
       </div>
 
-      {/* Fullscreen Zoom Lightbox */}
+      { }
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-[9999] cursor-zoom-out"

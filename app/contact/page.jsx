@@ -11,14 +11,13 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Message Sent! We will contact you shortly 😊");
+    alert("Message Sent! We will contact you shortly");
     setForm({ name: "", email: "", message: "" });
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 py-20 pt-[260px] overflow-hidden">
 
-      {/* Background Video */}
       <video
         autoPlay
         loop
@@ -29,10 +28,8 @@ export default function ContactPage() {
         <source src="/bgvideo.mp4" type="video/mp4" />
       </video>
 
-      {/* Dark Overlay for readability */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      {/* Contact Form */}
       <div className="relative backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl p-10 max-w-3xl w-full shadow-2xl">
         <h1 className="text-4xl font-bold text-white text-center mb-6 tracking-wide">
           Contact Us

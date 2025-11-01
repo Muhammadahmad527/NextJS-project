@@ -7,7 +7,6 @@ export default function PizzaioloLoader({ onFinish, duration = 3000 }) {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    // Start fade-out 0.5s before actual removal
     const fadeTimer = setTimeout(() => {
       setFadeOut(true);
     }, duration - 500);
@@ -37,9 +36,9 @@ export default function PizzaioloLoader({ onFinish, duration = 3000 }) {
         {word.split("").map((char, idx) => {
           let anim = "";
 
-          if (idx < 4) anim = "from-left"; // Pizz
-          else if (idx === 4) anim = "from-top-mirror"; // a
-          else anim = "from-right"; // iolo
+          if (idx < 4) anim = "from-left";
+          else if (idx === 4) anim = "from-top-mirror"; 
+          else anim = "from-right"; 
 
           return (
             <span

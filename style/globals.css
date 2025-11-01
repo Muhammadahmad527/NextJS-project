@@ -8,22 +8,22 @@ body{
     overflow-y: auto;
     overflow-x: hidden;
 }
-/* index.css (add after Tailwind) */
+
 @keyframes blink {
   50% { border-color: transparent; }
 }
 
-/* caret shown only while typing */
+
 .typing-caret {
   display: inline-block;
   width: 0;
-  border-right: 3px solid #facc15; /* yellow caret */
+  border-right: 3px solid #facc15; 
   margin-left: 2px;
   vertical-align: bottom;
   animation: blink .7s step-end infinite;
 }
 
-/* no caret (hidden) */
+
 .typing-caret.hidden {
   border-right-color: transparent;
   animation: none;
@@ -66,10 +66,52 @@ body{
   animation: armRight 1.6s infinite ease-in-out;
 }
 
+.notfound-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  filter: brightness(0.4);
+}
 
+.error-text {
+  font-size: 10rem;
+  font-weight: 800;
+  color: white;
+  animation: bounce 1.5s infinite ease-in-out;
+}
 
-/*new animaton*/
+.message {
+  font-size: 1.6rem;
+  color: #eee;
+  margin-top: -10px;
+  letter-spacing: 1px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
 .fade-up {
   opacity: 0;
   transform: translateY(30px);

@@ -26,7 +26,7 @@ export default function OurStory() {
     <section ref={sectionRef} className="bg-white py-16 px-6 md:px-40 overflow-hidden">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-        {/* Left side */}
+        { }
         <div className="fade-up flex flex-col justify-center md:mb-3">
           <div className="flex items-center mb-6">
             <div className="flex-1 border-t border-gray-300"></div>
@@ -76,7 +76,7 @@ export default function OurStory() {
           </a>
         </div>
 
-        {/* Right side - image */}
+        { }
         <div className="fade-up flex justify-center">
           <img
             src="/journey.jpg"

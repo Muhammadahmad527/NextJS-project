@@ -20,7 +20,6 @@ export default function Review() {
   const [startIndex, setStartIndex] = useState(0);
   const refs = useRef([]);
 
-  // ✅ Scroll Animation
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) =>

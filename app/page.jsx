@@ -13,7 +13,7 @@ import Top from "./components/Top";
 export default function Page() {
   return (
     <>
-      {/* <Header /> */}
+      
       <Hero />
       <About />
       <Story />
@@ -22,7 +22,6 @@ export default function Page() {
       <Gallery />
       <Loader />
       <Review />
-      {/* <Footer /> */}
       <Top />
     </>
   );

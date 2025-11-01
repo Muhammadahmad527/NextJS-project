@@ -13,12 +13,12 @@ const Footer = () => {
       //   backgroundColor: "black",
       // }}
     >
-      {/* Overlay */}
+      { }
       <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* Main Content */}
+      { }
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 p-8 md:p-16">
-        {/* Left - Logo + Text */}
+        { }
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4">
           <img
             src="/logo.png"
@@ -32,7 +32,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Center - Navigation */}
+        { }
         <div className="flex flex-col items-center justify-center space-y-5">
           <h3 className="text-xl font-semibold  text-yellow-400">
             Quick Links
@@ -54,7 +54,7 @@ const Footer = () => {
           </a>
         </div>
 
-        {/* Right - Map */}
+        { }
         <div className="flex justify-center md:justify-end">
           <div className="w-full h-[250px] rounded-xl overflow-hidden">
             <iframe
@@ -71,14 +71,14 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom - Copyright + Social Icons */}
+      { }
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center md:justify-between px-6 py-4 border-t border-white/20 text-center">
-        {/* Centered Text */}
+        { }
         <p className="text-sm text-center w-full md:w-auto">
           Pizzaiolo © 2025. All rights reserved.
         </p>
 
-        {/* Icons Right */}
+        { }
         <div className="flex space-x-4 mt-3 md:mt-0 text-2xl md:absolute md:right-6">
           <a
             href="https://www.facebook.com/pizzaiolosydney"

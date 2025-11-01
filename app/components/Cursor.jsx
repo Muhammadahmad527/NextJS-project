@@ -53,13 +53,13 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Dot Cursor */}
+      { }
       <div
         ref={cursorRef}
         className="fixed top-0 left-0 w-1.5 h-1.5 bg-black rounded-full pointer-events-none z-9999"
       />
       
-      {/* Border Cursor */}
+      { }
       <div
         ref={cursorBorderRef}
         className="fixed top-0 left-0 w-[27px] h-[27px] border border-black rounded-full pointer-events-none z-9999 opacity-50"

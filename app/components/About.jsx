@@ -22,7 +22,6 @@ const About = () => {
   return (
     <div ref={sectionRef} className="flex flex-col-reverse md:flex-row items-center px-8 md:px-20 lg:px-40 py-16 md:py-32 gap-16 md:gap-28 overflow-hidden">
 
-      {/* Video */}
       <div className="fade-left w-full md:w-1/2 flex justify-center md:justify-end">
         <video
           src="/video.mp4"
@@ -35,7 +34,7 @@ const About = () => {
         />
       </div>
 
-      {/* Content */}
+      { }
       <div className="fade-right w-full md:w-[420px]">
         <div className="flex justify-center mb-4">
           <FaPizzaSlice className="text-yellow-500 text-4xl" />

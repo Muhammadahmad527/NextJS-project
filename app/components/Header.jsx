@@ -12,11 +12,11 @@ export default function Header() {
 
   const menuItems = [
     { label: "Home", href: "/" },
-    { label: "Pizza Catering Form", href: "/pizza-form" },
+    { label: "Pizza Catering Form", href: "/pizza-catering-form" },
     { label: "Gallery", href: "/gallery" },
     { label: "Catering Form", href: "/catering-form" },
     { label: "Roaming Cannoli", href: "/roaming-cannoli" },
-    { label: "Pizzaiolo Setup", href: "/setuppizzaiolo" },
+    { label: "Pizzaiolo Setup", href: "/pizzaiolo-setup" },
   ];
 
   const [scrolled, setScrolled] = useState(false);
@@ -36,14 +36,11 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50">
 
-      {/* ✅ TOP BAR (Hide when scrolled) */}
       {!scrolled && (
         <div className="bg-[#000000] text-white px-4 py-3 text-sm">
 
-          {/* Mobile Layout */}
           <div className="md:hidden flex flex-col items-center text-center space-y-2">
 
-            {/* ✅ Row 1: Phone + Email in ONE LINE with spacing */}
             <div className="flex flex-wrap justify-center gap-3 text-[14px]">
               <a href="tel:0406858124" className="flex items-center gap-1 hover:text-red-500 transition">
                 <FiPhone className="text-[16px]" />
@@ -59,7 +56,6 @@ export default function Header() {
               </a>
             </div>
 
-            {/* ✅ Row 2: Mobile Icons + Contact Button */}
             <div className="flex items-center justify-center gap-4 pt-1">
               <a href="https://www.facebook.com/pizzaiolosydney" className="hover:text-blue-500 transition">
                 <FaFacebookF className="text-[18px]" />
@@ -81,8 +77,6 @@ export default function Header() {
 
           </div>
 
-
-          {/* Desktop Layout */}
           <div className="hidden md:flex items-center justify-between">
             <div className="flex items-center gap-6">
               <a href="tel:0406858124" className="flex items-center gap-1 hover:text-red-500 transition">
@@ -123,12 +117,10 @@ export default function Header() {
         </div>
       )}
 
-      {/* ✅ NAVBAR */}
       <nav
         className={`flex items-center justify-between px-6 md:px-8 lg:px-10 transition-all duration-500 ${scrolled ? "bg-black shadow-md py-2" : "bg-transparent py-4"
           }`}
       >
-        {/* Logo */}
         <Image
           src="/logo.png"
           alt="Logo"
@@ -137,29 +129,37 @@ export default function Header() {
           className={`transition-transform duration-500 hover:rotate-[360deg] ${scrolled ? "w-16 h-16" : "w-24 h-24"}`}
         />
 
-        {/* Desktop Links */}
         <ul className="hidden xl:flex space-x-6 text-white font-medium">
-          <Link href="/"><li className="hover:text-red-600 cursor-pointer duration-300">Home</li></Link>
+          <Link href="/">
+          <li className="hover:text-red-600 cursor-pointer duration-300">Home</li>
+          </Link>
+          <Link href="pizza-catering-form">
           <li className="hover:text-red-600 cursor-pointer duration-300">Pizza Catering Form</li>
-          <Link href="/gallery"><li className="hover:text-red-600 cursor-pointer duration-300">Gallery</li></Link>
+          </Link>
+          <Link href="/gallery">
+          <li className="hover:text-red-600 cursor-pointer duration-300">Gallery</li>
+          </Link>
+          <Link href="catering-form">
           <li className="hover:text-red-600 cursor-pointer duration-300">Catering Form</li>
+          </Link>
+          <Link href="roaming-cannoli">
           <li className="hover:text-red-600 cursor-pointer duration-300">Roaming Cannoli</li>
-          <Link href="/setuppizzaiolo"><li className="hover:text-red-600 cursor-pointer duration-300">Pizzaiolo Setup</li></Link>
+          </Link>
+          <Link href="/pizzaiolo-setup">
+          <li className="hover:text-red-600 cursor-pointer duration-300">Pizzaiolo Setup</li>
+          </Link>
         </ul>
 
-        {/* Contact Button Desktop */}
         <Link href="/contact">
           <button className="hidden xl:block px-4 py-2 rounded-full bg-red-600 border-2 border-red-600 text-white hover:bg-transparent hover:border-white transition cursor-pointer">
             Contact Us
           </button>
         </Link>
-        {/* Mobile Menu Icon */}
         <div className="xl:hidden text-white text-3xl cursor-pointer">
           <FiMenu onClick={() => setMenuOpen(true)} />
         </div>
       </nav>
 
-      {/* ✅ MOBILE SLIDE MENU */}
       <div
         className={`fixed top-0 right-0 h-full w-72 bg-black text-white transform transition-transform duration-500 z-50 ${menuOpen ? "translate-x-0" : "translate-x-full"
           }`}

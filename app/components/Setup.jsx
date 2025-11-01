@@ -17,7 +17,7 @@ const Setup = () => {
           }
         });
       },
-      { threshold: 0.25 } // show when 25% becomes visible
+      { threshold: 0.25 }
     );
 
     items.forEach((el) => observer.observe(el));
@@ -27,18 +27,18 @@ const Setup = () => {
     <div ref={sectionRef} className="px-6 md:px-12 lg:px-[70px] lg:pr-[110px] overflow-hidden">
       <section className="text-gray-600 body-font">
 
-        {/* Heading */}
+        { }
         <h1 className="fade-up text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
           How Pizzaiolo Work
         </h1>
 
-        {/* Wrapper */}
+        { }
         <div className="container mx-auto flex flex-col md:flex-row items-start md:items-start px-4 md:px-5 py-12 lg:py-24 gap-12">
 
-          {/* Left side steps */}
+          { }
           <div className="fade-up w-full md:w-1/2 lg:w-2/5 md:pr-10 md:py-6 lg:ml-8 mx-auto text-center lg:text-left">
 
-            {/* Step 1 */}
+            { }
             <div className="flex relative pb-12">
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
@@ -56,7 +56,7 @@ const Setup = () => {
               </div>
             </div>
 
-            {/* Step 2 */}
+            { }
             <div className="flex relative pb-12">
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
@@ -74,7 +74,7 @@ const Setup = () => {
               </div>
             </div>
 
-            {/* Step 3 */}
+            { }
             <div className="flex relative pb-12">
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
@@ -92,7 +92,7 @@ const Setup = () => {
               </div>
             </div>
 
-            {/* Step 4 */}
+            { }
             <div className="flex relative pb-12">
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
@@ -111,7 +111,7 @@ const Setup = () => {
             </div>
           </div>
 
-          {/* Right-side video */}
+          { }
           <div className="fade-up w-full md:w-1/2 flex justify-center md:justify-end">
             <video
               src="/pizza.mp4"
