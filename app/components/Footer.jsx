@@ -1,5 +1,6 @@
-"use client";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import Link from "next/link";
+
 
 const Footer = () => {
   return (
@@ -24,11 +25,11 @@ const Footer = () => {
         <div >
           <h3 className="text-lg font-semibold text-yellow-400 mb-3">Related Services</h3>
           <ul className="space-y-2 text-sm text-gray-300 mt-6">
-            <li><a href="/mobile-pizza-truck-catering-sydney/" className="hover:text-yellow-400">Mobile Pizza Catering Sydney</a></li>
-            <li><a href="/event-pizza-catering-sydney" className="hover:text-yellow-400">Event Pizza Catering Sydney</a></li>
-            <li><a href="/services" className="hover:text-yellow-400">Pizza Catering Inner West Sydney</a></li>
-            <li><a href="/contact" className="hover:text-yellow-400">Wedding Pizza Catering Sydney</a></li>
-            <li><a href="/faq" className="hover:text-yellow-400">Sutherland Shire pizza catering</a></li>
+            <li><Link href="/mobile-pizza-truck-catering-sydney/" className="hover:text-yellow-400">Mobile Pizza Catering Sydney</Link></li>
+            <li><Link href="/event-pizza-catering-sydney" className="hover:text-yellow-400">Event Pizza Catering Sydney</Link></li>
+            <li><Link href="/pizza-catering-inner-west-sydney" className="hover:text-yellow-400">Pizza Catering Inner West Sydney</Link></li>
+            <li><Link href="/wedding-pizza-catering-sydney" className="hover:text-yellow-400">Wedding Pizza Catering Sydney</Link></li>
+            <li><Link href="/pizza-catering-sutherland-shire" className="hover:text-yellow-400">Sutherland Shire pizza catering</Link></li>
           </ul>
         </div>
 
@@ -36,11 +37,11 @@ const Footer = () => {
         <div>
           <h3 className="text-lg  font-semibold text-yellow-400 mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm text-gray-300 mt-6">
-            <li><a href="/" className="hover:text-yellow-400">Home</a></li>
-            <li><a href="/gallery" className="hover:text-yellow-400">Gallery</a></li>
-            <li><a href="/catering-form" className="hover:text-yellow-400">Catering Form</a></li>
-            <li><a href="/roaming-cannoli" className="hover:text-yellow-400">Roaming Cannoli</a></li>
-            <li><a href="/pizzaiolo-setup" className="hover:text-yellow-400">Pizzaiolo Setup</a></li>
+            <li><Link href="/" className="hover:text-yellow-400">Home</Link></li>
+            <li><Link href="/gallery" className="hover:text-yellow-400">Gallery</Link></li>
+            <li><Link href="/catering-form" className="hover:text-yellow-400">Catering Form</Link></li>
+            <li><Link href="/roaming-cannoli" className="hover:text-yellow-400">Roaming Cannoli</Link></li>
+            <li><Link href="/pizzaiolo-setup" className="hover:text-yellow-400">Pizzaiolo Setup</Link></li>
           </ul>
         </div>
 
