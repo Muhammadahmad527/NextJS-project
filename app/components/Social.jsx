@@ -1,4 +1,3 @@
-"use client";
 
 import { FaInstagram, FaFacebook, FaRegEnvelope } from "react-icons/fa";
 

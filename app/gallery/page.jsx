@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Close lightbox when pressing ESC
+  
   useEffect(() => {
     const handleEsc = (e) => {
       if (e.key === "Escape") setSelectedImage(null);

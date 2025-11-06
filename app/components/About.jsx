@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { FaPizzaSlice, FaStar } from "react-icons/fa";
+import Link from "next/link";
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -55,9 +56,9 @@ const About = () => {
         </div>
 
         <div className="text-center pt-10 md:pt-20">
-          <button className="bg-red-600 text-white font-medium px-6 py-2 rounded-full border border-transparent hover:bg-transparent hover:text-black hover:border-black transition-all duration-300">
+          <Link href="https://pizzaiolo-woodfire-pizza.square.site/s/order"><button className="bg-red-600 text-white font-medium px-6 py-2 rounded-full border border-transparent hover:bg-transparent hover:text-black hover:border-black transition-all duration-300">
             Book Event
-          </button>
+          </button></Link>
         </div>
       </div>
     </div>

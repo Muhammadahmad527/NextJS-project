@@ -31,9 +31,14 @@ export default function CateringForm() {
                     Event Catering
                 </h2>
 
+                <p className="text-yellow-400 font-medium mb-16 mt-10">
+                    * We don’t just make pizza. Explore our full menu featuring delicious pastas, fresh salads, crispy arancini, and plenty more to enjoy.
+                </p>
                 <p className="text-gray-300 mb-10">
                     Please provide the following information and we will get back to you as soon as possible.
                 </p>
+
+               
 
                 <Link
                     href="https://pizzaiolo-woodfire-pizza.square.site/catering-form" 

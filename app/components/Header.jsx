@@ -7,7 +7,6 @@ import { FiMail } from "react-icons/fi";
 import Image from "next/image";
 import Link from "next/link";
 
-
 export default function Header() {
 
   const menuItems = [
@@ -131,22 +130,22 @@ export default function Header() {
 
         <ul className="hidden xl:flex space-x-6 text-white font-medium">
           <Link href="/">
-          <li className="hover:text-red-600 cursor-pointer duration-300">Home</li>
+            <li className="hover:text-red-600 cursor-pointer duration-300">Home</li>
           </Link>
           <Link href="pizza-catering-form">
-          <li className="hover:text-red-600 cursor-pointer duration-300">Pizza Catering Form</li>
+            <li className="hover:text-red-600 cursor-pointer duration-300">Pizza Catering Form</li>
           </Link>
           <Link href="/gallery">
-          <li className="hover:text-red-600 cursor-pointer duration-300">Gallery</li>
+            <li className="hover:text-red-600 cursor-pointer duration-300">Gallery</li>
           </Link>
           <Link href="catering-form">
-          <li className="hover:text-red-600 cursor-pointer duration-300">Catering Form</li>
+            <li className="hover:text-red-600 cursor-pointer duration-300">Catering Form</li>
           </Link>
           <Link href="roaming-cannoli">
-          <li className="hover:text-red-600 cursor-pointer duration-300">Roaming Cannoli</li>
+            <li className="hover:text-red-600 cursor-pointer duration-300">Roaming Cannoli</li>
           </Link>
           <Link href="/pizzaiolo-setup">
-          <li className="hover:text-red-600 cursor-pointer duration-300">Pizzaiolo Setup</li>
+            <li className="hover:text-red-600 cursor-pointer duration-300">Pizzaiolo Setup</li>
           </Link>
         </ul>
 

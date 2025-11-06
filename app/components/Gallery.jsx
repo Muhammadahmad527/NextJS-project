@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { FiCamera, FiX, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
@@ -25,11 +25,11 @@ export default function Gallery() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // ✅ Initialize refs as array
+  
   const refs = useRef([]);
 
   useEffect(() => {
-    // ✅ Ensure this only runs in browser (Fix for Next.js SSR)
+    
     if (typeof window === "undefined") return;
 
     const observer = new IntersectionObserver(
@@ -89,9 +89,9 @@ export default function Gallery() {
         </div>
 
         <div className="mt-8">
-          <button className="bg-red-600 text-white cursor-pointer font-medium px-6 py-2 rounded-full border border-transparent hover:bg-transparent hover:text-black hover:border-black transition-colors duration-400 ease-in-out">
+          <Link href="/gallery"><button className="bg-red-600 text-white cursor-pointer font-medium px-6 py-2 rounded-full border border-transparent hover:bg-transparent hover:text-black hover:border-black transition-colors duration-400 ease-in-out">
             Show More
-          </button>
+          </button></Link>
         </div>
       </section>
 

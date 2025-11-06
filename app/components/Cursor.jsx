@@ -7,7 +7,6 @@ export default function CustomCursor() {
   const cursorBorderRef = useRef(null);
 
   useEffect(() => {
-    // Detect mobile and stop cursor rendering
     if (window.matchMedia("(max-width: 768px)").matches) return;
 
     const cursor = cursorRef.current;
@@ -46,7 +45,6 @@ export default function CustomCursor() {
     };
   }, []);
 
-  // Prevent rendering on mobile SSR hydration mismatch:
   if (typeof window !== "undefined" && window.matchMedia("(max-width: 768px)").matches) {
     return null;
   }
